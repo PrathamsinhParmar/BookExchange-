@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details - BookExchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/book-details.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><h2>BookExchange</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="buyer-dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link">Cart <span class="cart-count">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Book Details Content -->
+    <section class="book-details">
+        <div class="container">
+            <div class="book-details-content">
+                <div class="book-image">
+                    <img id="bookImage" src="../assets/images/book-placeholder.jpg" alt="Book Cover">
+                </div>
+                
+                <div class="book-info">
+                    <h1 id="bookTitle">Book Title</h1>
+                    <p class="book-author" id="bookAuthor">By Author Name</p>
+                    <div class="book-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="rating-text">(4.8/5) - 124 reviews</span>
+                    </div>
+                    
+                    <div class="book-price">
+                        <span class="current-price" id="bookPrice">$29.99</span>
+                        <span class="original-price" id="originalPrice">$49.99</span>
+                        <span class="discount" id="discount">40% OFF</span>
+                    </div>
+                    
+                    <div class="book-details-list">
+                        <div class="detail-item">
+                            <span class="detail-label">Category:</span>
+                            <span class="detail-value" id="bookCategory">Fiction</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Condition:</span>
+                            <span class="detail-value" id="bookCondition">Excellent</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Seller:</span>
+                            <span class="detail-value" id="sellerName">John Doe</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Location:</span>
+                            <span class="detail-value" id="bookLocation">New York, NY</span>
+                        </div>
+                    </div>
+                    
+                    <div class="book-description">
+                        <h3>Description</h3>
+                        <p id="bookDescription">This is a detailed description of the book. It provides information about the content, plot, and other relevant details that would help a buyer make an informed decision.</p>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <button class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                        <button class="btn btn-secondary" id="buyNowBtn">Buy Now</button>
+                        <button class="btn btn-outline" id="wishlistBtn">♡ Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seller Information -->
+            <div class="seller-info">
+                <h3>About the Seller</h3>
+                <div class="seller-card">
+                    <div class="seller-avatar">
+                        <img src="../assets/images/seller-avatar.jpg" alt="Seller">
+                    </div>
+                    <div class="seller-details">
+                        <h4 id="sellerName">John Doe</h4>
+                        <div class="seller-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.9/5 (89 reviews)</span>
+                        </div>
+                        <p>Member since 2023</p>
+                        <button class="btn btn-outline btn-sm">View Profile</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reviews Section -->
+            <div class="reviews-section">
+                <h3>Customer Reviews</h3>
+                <div class="reviews-summary">
+                    <div class="rating-breakdown">
+                        <div class="rating-item">
+                            <span>5★</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 80%"></div>
+                            </div>
+                            <span>89</span>
+                        </div>
+                        <div class="rating-item">
+                            <span>4★</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 15%"></div>
+                            </div>
+                            <span>17</span>
+                        </div>
+                        <div class="rating-item">
+                            <span>3★</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 3%"></div>
+                            </div>
+                            <span>3</span>
+                        </div>
+                        <div class="rating-item">
+                            <span>2★</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 1%"></div>
+                            </div>
+                            <span>1</span>
+                        </div>
+                        <div class="rating-item">
+                            <span>1★</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 1%"></div>
+                            </div>
+                            <span>1</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Reviews will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookExchange</h3>
+                    <p>Your trusted platform for buying and selling used books.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BookExchange. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/book-details.js"></script>
+</body>
+</html>

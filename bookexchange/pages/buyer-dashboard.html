@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard - BookExchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><h2>BookExchange</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="buyer-dashboard.html" class="nav-link active">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link">Cart <span class="cart-count">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Welcome back, <span id="userName">User</span>!</h1>
+                <p>Browse and buy amazing books from our collection</p>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="search-filters">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for books...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="academic">Academic</option>
+                        <option value="textbook">Textbook</option>
+                        <option value="novel">Novel</option>
+                    </select>
+                    <select id="priceFilter">
+                        <option value="">All Prices</option>
+                        <option value="0-50">Under $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100-200">$100 - $200</option>
+                        <option value="200+">Above $200</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Books Grid -->
+            <div class="books-section">
+                <h2>Available Books</h2>
+                <div class="books-grid" id="booksGrid">
+                    <!-- Books will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <div class="orders-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Book</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTableBody">
+                            <!-- Orders will be loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookExchange</h3>
+                    <p>Your trusted platform for buying and selling used books.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BookExchange. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

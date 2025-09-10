@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookExchange - Online Used Book Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BookExchange</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link btn-login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="signup.html" class="nav-link btn-signup">Sign Up</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Find Your Next Great Read</h1>
+                <p>Buy and sell used books at amazing prices. Connect with fellow book lovers and discover hidden literary gems.</p>
+                <div class="hero-buttons">
+                    <a href="signup.html" class="btn btn-primary">Get Started</a>
+                    <a href="#featured-books" class="btn btn-secondary">Browse Books</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/images/hero-books.jpg" alt="Books" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section id="featured-books" class="featured-books">
+        <div class="container">
+            <h2 class="section-title">Featured Books</h2>
+            <div class="books-grid" id="books-grid">
+                <!-- Books will be loaded dynamically -->
+            </div>
+            <div class="text-center">
+                <a href="login.html" class="btn btn-outline">View All Books</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose BookExchange?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Huge Collection</h3>
+                    <p>Browse through thousands of books across various genres and subjects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Great Prices</h3>
+                    <p>Find books at unbeatable prices, often 50-80% off retail prices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Safe & Secure</h3>
+                    <p>Secure transactions and verified sellers ensure a safe buying experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping to get your books delivered fast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookExchange</h3>
+                    <p>Your trusted platform for buying and selling used books.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BookExchange. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

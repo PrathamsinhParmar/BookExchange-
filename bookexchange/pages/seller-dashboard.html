@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - BookExchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><h2>BookExchange</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="seller-dashboard.html" class="nav-link active">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="addBookBtn">Add Book</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Seller Dashboard</h1>
+                <p>Manage your books and track your sales</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-content">
+                        <h3 id="totalBooks">0</h3>
+                        <p>Total Books</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <h3 id="totalSales">$0</h3>
+                        <p>Total Sales</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🛒</div>
+                    <div class="stat-content">
+                        <h3 id="totalOrders">0</h3>
+                        <p>Orders</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-content">
+                        <h3 id="rating">0.0</h3>
+                        <p>Rating</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Book Button -->
+            <div class="add-book-section">
+                <button class="btn btn-primary" id="addNewBookBtn">+ Add New Book</button>
+            </div>
+
+            <!-- My Books -->
+            <div class="my-books-section">
+                <h2>My Books</h2>
+                <div class="books-grid" id="myBooksGrid">
+                    <!-- Books will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Recent Sales -->
+            <div class="recent-sales">
+                <h2>Recent Sales</h2>
+                <div class="sales-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Book</th>
+                                <th>Buyer</th>
+                                <th>Price</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="salesTableBody">
+                            <!-- Sales will be loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Book Modal -->
+    <div id="addBookModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Book</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="addBookForm" class="modal-form">
+                <div class="form-group">
+                    <label for="bookTitle">Book Title</label>
+                    <input type="text" id="bookTitle" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookAuthor">Author</label>
+                    <input type="text" id="bookAuthor" name="author" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookCategory">Category</label>
+                        <select id="bookCategory" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="academic">Academic</option>
+                            <option value="textbook">Textbook</option>
+                            <option value="novel">Novel</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookPrice">Price ($)</label>
+                        <input type="number" id="bookPrice" name="price" step="0.01" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookDescription">Description</label>
+                    <textarea id="bookDescription" name="description" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookCondition">Condition</label>
+                    <select id="bookCondition" name="condition" required>
+                        <option value="">Select Condition</option>
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookImage">Book Cover Image</label>
+                    <input type="file" id="bookImage" name="image" accept="image/*" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelAddBook">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookExchange</h3>
+                    <p>Your trusted platform for buying and selling used books.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BookExchange. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/seller-dashboard.js"></script>
+</body>
+</html>

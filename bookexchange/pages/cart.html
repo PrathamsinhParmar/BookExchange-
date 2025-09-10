@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - BookExchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><h2>BookExchange</h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="buyer-dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link active">Cart <span class="cart-count">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <p>Review your selected books before checkout</p>
+            </div>
+
+            <div class="cart-content">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded dynamically -->
+                    <div class="empty-cart" id="emptyCart">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h3>Your cart is empty</h3>
+                        <p>Add some books to get started!</p>
+                        <a href="buyer-dashboard.html" class="btn btn-primary">Browse Books</a>
+                    </div>
+                </div>
+
+                <div class="cart-summary" id="cartSummary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">$5.99</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$5.99</span>
+                    </div>
+                    <button class="btn btn-primary btn-full" id="checkoutBtn" disabled>Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookExchange</h3>
+                    <p>Your trusted platform for buying and selling used books.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BookExchange. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/cart.js"></script>
+</body>
+</html>
