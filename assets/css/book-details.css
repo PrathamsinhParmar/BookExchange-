@@ -1,0 +1,32 @@
+/* Scoped styles for the book details page */
+
+.book-details .book-details-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+}
+
+/* Override the generic .book-image card styles so the image isn't cropped */
+.book-details .book-image {
+	height: auto !important;
+	overflow: visible !important;
+	text-align: center;
+}
+
+.book-details .book-image img {
+	width: 100%;
+	height: auto !important;
+	max-height: 600px;
+	object-fit: contain;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+	.book-details .book-details-content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+}
+
+
